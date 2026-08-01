@@ -66,11 +66,11 @@
                 <div class="p-8 bg-white rounded-2xl border border-[#C5A059]/30 shadow-sm hover:border-[#C5A059] hover:shadow-md transition-all">
                     <div class="flex items-center justify-between mb-4">
                         <span class="font-serif text-4xl font-bold text-[#C5A059]">04</span>
-                        <span class="text-[10px] uppercase tracking-widest text-[#C5A059] bg-[#C5A059]/10 px-3 py-1 rounded-full font-bold">Enugu Dispatch</span>
+                        <span class="text-[10px] uppercase tracking-widest text-[#C5A059] bg-[#C5A059]/10 px-3 py-1 rounded-full font-bold">Abuja/Enugu Dispatch</span>
                     </div>
                     <h3 class="font-serif text-2xl font-semibold text-[#121212] mb-3">Exceptional Care & Rapid Dispatch</h3>
                     <p class="text-sm text-gray-600 leading-relaxed font-light">
-                        Based out of our flagship boutique in Independence Layout, Enugu, we offer complimentary regional delivery within Enugu and swift, secure, shock-proof nationwide shipping across Nigeria.
+                        Operating online across Abuja, Enugu, and Lagos (with primary hub at Opposite Trem Church Lifecamp, Abuja), we offer rapid delivery and swift, secure, shock-proof nationwide shipping across Nigeria.
                     </p>
                 </div>
             </div>

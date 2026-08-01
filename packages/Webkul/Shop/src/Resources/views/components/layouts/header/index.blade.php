@@ -2,7 +2,7 @@
 
 <!-- Global Announcement Bar -->
 <div class="bg-[#C5A059] text-[#121212] text-center py-1.5 sm:py-2.5 px-3 text-[10px] sm:text-xs font-semibold tracking-wider sm:tracking-widest uppercase leading-tight">
-    Free Delivery on Select Orders | 100% Authentic Designer & Arabian Fragrances | Located in Enugu, Shipping Nationwide
+    Free Delivery on Select Orders | 100% Authentic Designer & Arabian Fragrances | Operating in Abuja, Enugu & Lagos
 </div>
 
 @if(core()->getCurrentChannel()->locales()->count() > 1 || core()->getCurrentChannel()->currencies()->count() > 1 )

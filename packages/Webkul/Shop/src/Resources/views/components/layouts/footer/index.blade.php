@@ -17,9 +17,9 @@
                     Nigeria's premier luxury digital flagship boutique. Curated authentic designer and niche Arabian extraits de parfum.
                 </p>
                 <div class="text-xs text-gray-300 space-y-1.5 pt-2">
-                    <p class="font-semibold text-champagneGold">Flagship Concept Boutique:</p>
-                    <p class="text-gray-400">B2F2 Fed Secretariat Quarters,</p>
-                    <p class="text-gray-400">Independence Layout, Enugu State, Nigeria.</p>
+                    <p class="font-semibold text-champagneGold">Operating Online (Abuja, Enugu & Lagos):</p>
+                    <p class="text-gray-400">Opposite Trem Church Lifecamp,</p>
+                    <p class="text-gray-400">Abuja, Nigeria.</p>
                 </div>
             </div>
 

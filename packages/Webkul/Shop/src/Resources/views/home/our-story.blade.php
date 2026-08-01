@@ -12,7 +12,7 @@
                     Born from a Passion for Unforgettable Scents
                 </h1>
                 <p class="text-gray-600 max-w-xl mx-auto text-xs sm:text-sm leading-relaxed font-light">
-                    The journey of Aniel's Perfumery—from our flagship boutique in Enugu to a digital destination serving fragrance lovers nationwide.
+                    The journey of Aniel's Perfumery—an online luxury fragrance destination serving fragrance lovers across Abuja, Enugu, Lagos, and nationwide.
                 </p>
             </div>
         </header>
@@ -21,11 +21,11 @@
         <section class="py-16 sm:py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center mb-12 sm:mb-16">
                 <div class="lg:col-span-6 relative rounded-lg overflow-hidden border border-champagneGold/20 h-64 sm:h-96 shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=1000" alt="Aniel's Flagship Boutique" class="w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=1000" alt="Aniel's Luxury Experience" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-matteBlack/80 via-transparent to-transparent"></div>
                     <div class="absolute bottom-4 left-4 right-4 text-ivory">
-                        <span class="text-[10px] uppercase tracking-widest text-champagneGold font-semibold">Flagship Concept Store</span>
-                        <h4 class="font-serif text-base sm:text-lg font-bold">Independence Layout, Enugu</h4>
+                        <span class="text-[10px] uppercase tracking-widest text-champagneGold font-semibold">Online Store • Abuja, Enugu & Lagos</span>
+                        <h4 class="font-serif text-base sm:text-lg font-bold">Opposite Trem Church Lifecamp, Abuja</h4>
                     </div>
                 </div>
 
@@ -90,11 +90,11 @@
                     <div class="p-8 bg-white rounded-2xl border border-champagneGold/30 shadow-sm hover:border-champagneGold transition-all">
                         <div class="flex items-center justify-between mb-4">
                             <span class="font-serif text-4xl font-bold text-champagneGold">04</span>
-                            <span class="text-[10px] uppercase tracking-widest text-champagneGold bg-champagneGold/10 px-3 py-1 rounded-full font-bold">Enugu Dispatch</span>
+                            <span class="text-[10px] uppercase tracking-widest text-champagneGold bg-champagneGold/10 px-3 py-1 rounded-full font-bold">Abuja/Enugu Dispatch</span>
                         </div>
                         <h3 class="font-serif text-xl font-semibold text-matteBlack mb-3">Exceptional Care & Rapid Dispatch</h3>
                         <p class="text-xs sm:text-sm text-gray-600 leading-relaxed font-light">
-                            Based out of our flagship boutique in Independence Layout, Enugu, we offer complimentary regional delivery within Enugu and swift, secure, shock-proof nationwide shipping across Nigeria.
+                            Operating online across Abuja, Enugu, and Lagos (with primary hub at Opposite Trem Church Lifecamp, Abuja), we offer rapid delivery and swift, secure, shock-proof nationwide shipping across Nigeria.
                         </p>
                     </div>
                 </div>

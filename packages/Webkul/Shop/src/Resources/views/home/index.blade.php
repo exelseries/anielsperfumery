@@ -169,22 +169,16 @@
         <section class="py-20 bg-softBeige/30 border-b border-champagneGold/20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <span class="text-xs uppercase tracking-[0.4em] text-champagneGold font-semibold mb-2 block">The Aniel's Difference</span>
-                <h2 class="font-serif text-3xl sm:text-5xl font-light text-matteBlack mb-6">Why Discerning Perfume Lovers Choose Aniel's</h2>
-                <p class="max-w-3xl mx-auto text-gray-600 text-sm sm:text-base leading-relaxed mb-8 font-light">
-                    From 100% direct original sourcing for top Arabian and designer houses to our climate-resilience testing, we take the guesswork out of luxury fragrance buying across Nigeria.
-                </p>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left max-w-5xl mx-auto mb-10">
-                    <div class="p-6 bg-white rounded border border-champagneGold/20 shadow-sm">
-                        <span class="text-champagneGold font-bold text-lg font-serif mb-2 block">100% Authentic</span>
-                        <p class="text-xs text-gray-500">Guaranteed original bottles sourced directly from verified distributors.</p>
+                <h2 class="font-serif text-3xl sm:text-5xl font-light text-matteBlack mb-10">Why Discerning Perfume Lovers Choose Aniel's</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center max-w-4xl mx-auto mb-10">
+                    <div class="p-6 bg-white rounded border border-champagneGold/20 shadow-sm flex items-center justify-center">
+                        <span class="text-matteBlack font-bold text-base font-serif">100% authentic</span>
                     </div>
-                    <div class="p-6 bg-white rounded border border-champagneGold/20 shadow-sm">
-                        <span class="text-champagneGold font-bold text-lg font-serif mb-2 block">Tested Longevity</span>
-                        <p class="text-xs text-gray-500">Every scent rated for fabric retention and sillage projection.</p>
+                    <div class="p-6 bg-white rounded border border-champagneGold/20 shadow-sm flex items-center justify-center">
+                        <span class="text-matteBlack font-bold text-base font-serif">Tested longevity</span>
                     </div>
-                    <div class="p-6 bg-white rounded border border-champagneGold/20 shadow-sm">
-                        <span class="text-champagneGold font-bold text-lg font-serif mb-2 block">Enugu Dispatch</span>
-                        <p class="text-xs text-gray-500">Rapid nationwide shipping with shock-proof luxury protective packaging.</p>
+                    <div class="p-6 bg-white rounded border border-champagneGold/20 shadow-sm flex items-center justify-center">
+                        <span class="text-matteBlack font-bold text-base font-serif">Abuja/Enugu dispatch</span>
                     </div>
                 </div>
                 <a href="{{ route('shop.home.why_aniels') }}" class="inline-block px-8 py-4 bg-matteBlack text-ivory uppercase tracking-widest text-xs font-bold rounded shadow-lg hover:bg-champagneGold hover:text-matteBlack transition-all duration-300">
@@ -197,11 +191,11 @@
         <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-champagneGold/10 bg-ivory">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="relative rounded-lg overflow-hidden border border-champagneGold/20 h-96 shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=1000" alt="Aniel's Flagship Boutique" class="w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=1000" alt="Aniel's Luxury Experience" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-matteBlack/80 to-transparent"></div>
                     <div class="absolute bottom-6 left-6 right-6 text-ivory">
-                        <span class="text-[10px] uppercase tracking-widest text-champagneGold">Flagship Concept Store</span>
-                        <h4 class="font-serif text-lg font-bold">Independence Layout, Enugu</h4>
+                        <span class="text-[10px] uppercase tracking-widest text-champagneGold">Online Store • Abuja, Enugu & Lagos</span>
+                        <h4 class="font-serif text-lg font-bold">Opposite Trem Church Lifecamp, Abuja</h4>
                     </div>
                 </div>
                 <div>

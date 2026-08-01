@@ -15,8 +15,8 @@
         </div>
         <div class="flex flex-col items-center">
             <div class="w-12 h-12 rounded-full bg-champagneGold/10 border border-champagneGold/30 flex items-center justify-center text-champagneGold text-xl font-serif font-bold mb-3">✈</div>
-            <h4 class="font-serif text-sm font-bold text-matteBlack mb-1 uppercase tracking-wider">Enugu Dispatch</h4>
-            <p class="text-[11px] text-gray-500 max-w-[200px] leading-relaxed">Fast regional delivery and nationwide shock-proof shipping</p>
+            <h4 class="font-serif text-sm font-bold text-matteBlack mb-1 uppercase tracking-wider">Abuja/Enugu Dispatch</h4>
+            <p class="text-[11px] text-gray-500 max-w-[200px] leading-relaxed">Fast delivery across Abuja, Enugu, Lagos & nationwide</p>
         </div>
         <div class="flex flex-col items-center">
             <div class="w-12 h-12 rounded-full bg-champagneGold/10 border border-champagneGold/30 flex items-center justify-center text-champagneGold text-xl font-serif font-bold mb-3">★</div>

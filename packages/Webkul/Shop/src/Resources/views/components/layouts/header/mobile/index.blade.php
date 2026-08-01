@@ -411,7 +411,7 @@
 
                         <!-- Drawer Footer WhatsApp Panel -->
                         <div class="mt-6 p-4 rounded-xl border border-[#C5A059]/30 bg-[#1E1E1E] text-center space-y-3">
-                            <p class="text-[10px] text-gray-400 uppercase tracking-widest">Flagship Boutique • Enugu, Nigeria</p>
+                            <p class="text-[10px] text-gray-400 uppercase tracking-widest">Online Store • Abuja, Enugu & Lagos</p>
                             <a href="https://wa.me/2348123428579" target="_blank" class="block w-full py-3 bg-[#C5A059] text-[#121212] font-bold text-xs uppercase tracking-widest rounded-lg shadow-lg hover:brightness-110 transition-all text-center">
                                 WhatsApp Orders
                             </a>
