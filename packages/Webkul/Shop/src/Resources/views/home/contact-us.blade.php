@@ -1,142 +1,118 @@
-<!-- Page Layout -->
 <x-shop::layouts>
-    <!-- Page Title -->
     <x-slot:title>
-        @lang('shop::app.home.contact.title')
+        Contact Us — Aniel's Perfumery
     </x-slot>
 
-    <div class="container mt-8 max-1180:px-5 max-md:mt-6 max-md:px-4">
-        <!-- Form Container -->
-		<div class="m-auto w-full max-w-[870px] rounded-xl border border-zinc-200 p-16 px-[90px] max-md:px-8 max-md:py-8 max-sm:border-none max-sm:p-0">
-			<h1 class="font-dmserif text-4xl max-md:text-3xl max-sm:text-xl">
-                @lang('shop::app.home.contact.title')
-            </h1>
+    <div class="py-16 bg-ivory min-h-[70vh]">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            <div class="bg-white rounded-2xl border border-champagneGold/30 p-8 sm:p-12 shadow-lg">
+                <div class="text-center mb-10">
+                    <span class="text-xs uppercase tracking-[0.3em] text-champagneGold font-semibold block mb-2">Concierge & Support</span>
+                    <h1 class="font-serif text-3xl sm:text-5xl font-light text-matteBlack mb-3">Get in Touch</h1>
+                    <p class="text-xs sm:text-sm text-gray-500 font-light max-w-md mx-auto">
+                        Jot us a note, and our fragrance concierge will get back to you as quickly as possible.
+                    </p>
+                </div>
 
-			<p class="mt-4 text-xl text-zinc-500 max-sm:mt-1 max-sm:text-sm">
-                @lang('shop::app.home.contact.about')
-            </p>
+                @if (session('success'))
+                    <div class="mb-8 p-4 bg-green-50 border border-green-200 text-green-800 text-xs sm:text-sm rounded-lg text-center font-medium">
+                        {{ session('success') }}
+                    </div>
+                @endif
 
-            <div
-                id="contact-us-form"
-                class="mt-14 rounded max-sm:mt-8"
-            >
-                <!-- Contact Form -->
-                <x-shop::form :action="route('shop.home.contact_us.send_mail')">
+                <form action="{{ route('shop.home.contact_us.send_mail') }}" method="POST" class="space-y-6">
+                    @csrf
+
                     <!-- Name -->
-                    <x-shop::form.control-group>
-                        <x-shop::form.control-group.label class="required">
-                            @lang('shop::app.home.contact.name')
-                        </x-shop::form.control-group.label>
-
-                        <x-shop::form.control-group.control
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-matteBlack mb-2">
+                            Your Full Name <span class="text-red-500">*</span>
+                        </label>
+                        <input
                             type="text"
-                            class="px-6 py-5 max-md:py-3 max-sm:py-3.5"
                             name="name"
-                            rules="required"
-                            :value="old('name')"
-                            :label="trans('shop::app.home.contact.name')"
-                            :placeholder="trans('shop::app.home.contact.name')"
-                            :aria-label="trans('shop::app.home.contact.name')"
-                            aria-required="true"
+                            required
+                            value="{{ old('name') }}"
+                            placeholder="Enter your name"
+                            class="w-full px-5 py-4 bg-ivory/40 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-champagneGold transition-colors"
                         />
-
-                        <x-shop::form.control-group.error control-name="name" />
-                    </x-shop::form.control-group>
+                        @error('name')
+                            <p class="mt-1 text-xs text-red-500">{{ $message }}</p>
+                        @enderror
+                    </div>
 
                     <!-- Email -->
-                    <x-shop::form.control-group>
-                        <x-shop::form.control-group.label class="required">
-                            @lang('shop::app.home.contact.email')
-                        </x-shop::form.control-group.label>
-
-                        <x-shop::form.control-group.control
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-matteBlack mb-2">
+                            Email Address <span class="text-red-500">*</span>
+                        </label>
+                        <input
                             type="email"
-                            class="px-6 py-5 max-md:py-3 max-sm:py-3.5"
                             name="email"
-                            rules="required|email"
-                            :value="old('email')"
-                            :label="trans('shop::app.home.contact.email')"
-                            :placeholder="trans('shop::app.home.contact.email')"
-                            :aria-label="trans('shop::app.home.contact.email')"
-                            aria-required="true"
+                            required
+                            value="{{ old('email') }}"
+                            placeholder="Enter your email"
+                            class="w-full px-5 py-4 bg-ivory/40 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-champagneGold transition-colors"
                         />
+                        @error('email')
+                            <p class="mt-1 text-xs text-red-500">{{ $message }}</p>
+                        @enderror
+                    </div>
 
-                        <x-shop::form.control-group.error control-name="email" />
-                    </x-shop::form.control-group>
-
-                    <!-- Contact -->
-                    <x-shop::form.control-group>
-                        <x-shop::form.control-group.label>
-                            @lang('shop::app.home.contact.phone-number')
-                        </x-shop::form.control-group.label>
-
-                        <x-shop::form.control-group.control
+                    <!-- Phone Number -->
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-matteBlack mb-2">
+                            Phone / WhatsApp Number
+                        </label>
+                        <input
                             type="text"
-                            class="px-6 py-5 max-md:py-3 max-sm:py-3.5"
                             name="contact"
-                            rules="phone"
-                            :value="old('contact')"
-                            :label="trans('shop::app.home.contact.phone-number')"
-                            :placeholder="trans('shop::app.home.contact.phone-number')"
-                            :aria-label="trans('shop::app.home.contact.phone-number')"
+                            value="{{ old('contact') }}"
+                            placeholder="+234..."
+                            class="w-full px-5 py-4 bg-ivory/40 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-champagneGold transition-colors"
                         />
-
-                        <x-shop::form.control-group.error control-name="contact" />
-                    </x-shop::form.control-group>
+                    </div>
 
                     <!-- Message -->
-                    <x-shop::form.control-group>
-                        <x-shop::form.control-group.label class="required">
-                            @lang('shop::app.home.contact.desc')
-                        </x-shop::form.control-group.label>
-
-                        <x-shop::form.control-group.control
-                            type="textarea"
-                            class="px-6 py-5 max-md:py-3 max-sm:py-3.5"
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-matteBlack mb-2">
+                            Message <span class="text-red-500">*</span>
+                        </label>
+                        <textarea
                             name="message"
-                            rules="required"
-                            :label="trans('shop::app.home.contact.message')"
-                            :placeholder="trans('shop::app.home.contact.describe-here')"
-                            :aria-label="trans('shop::app.home.contact.message')"
-                            aria-required="true"
-                            rows="10"
-                        />
-
-                        <x-shop::form.control-group.error control-name="message" />
-                    </x-shop::form.control-group>
-
-                    <!-- Captcha -->
-                    @if (core()->getConfigData('customer.captcha.credentials.status'))
-                        @php
-                            try {
-                                echo \Webkul\Customer\Facades\Captcha::render();
-                            } catch (\Throwable $e) {
-                                // Captcha silent fallback
-                            }
-                        @endphp
-                    @endif
+                            required
+                            rows="6"
+                            placeholder="Describe your inquiry, order details, or fragrance question..."
+                            class="w-full px-5 py-4 bg-ivory/40 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-champagneGold transition-colors resize-y"
+                        >{{ old('message') }}</textarea>
+                        @error('message')
+                            <p class="mt-1 text-xs text-red-500">{{ $message }}</p>
+                        @enderror
+                    </div>
 
                     <!-- Submit Button -->
-                    <div class="mt-8 flex flex-wrap items-center gap-9 max-sm:justify-center max-sm:text-center">
+                    <div class="pt-4 text-center">
                         <button
-                            class="primary-button m-0 mx-auto block w-full max-w-[374px] rounded-2xl px-11 py-4 text-center text-base max-md:max-w-full max-md:rounded-lg max-md:py-3 max-sm:py-1.5 ltr:ml-0 rtl:mr-0"
                             type="submit"
+                            class="w-full sm:w-auto px-10 py-4 bg-matteBlack text-ivory uppercase tracking-widest text-xs font-bold rounded-lg shadow-lg hover:bg-champagneGold hover:text-matteBlack transition-all duration-300"
                         >
-                            @lang('shop::app.home.contact.submit')
+                            Send Message
                         </button>
                     </div>
-                </x-shop::form>
-            </div>
-		</div>
-    </div>
+                </form>
 
-    @push('scripts')
-        @php
-            try {
-                echo \Webkul\Customer\Facades\Captcha::renderJS();
-            } catch (\Throwable $e) {
-                // Captcha JS silent fallback
-            }
-        @endphp
-    @endpush
+                <!-- Direct Contact Alternatives -->
+                <div class="mt-12 pt-8 border-t border-gray-100 grid grid-cols-1 sm:grid-cols-2 gap-6 text-center text-xs">
+                    <div class="p-4 bg-softBeige/30 rounded-lg border border-champagneGold/20">
+                        <span class="text-champagneGold font-bold block mb-1">WhatsApp Direct Concierge</span>
+                        <a href="https://wa.me/2348123428579" target="_blank" class="text-matteBlack font-semibold hover:underline">+234 812 342 8579</a>
+                    </div>
+                    <div class="p-4 bg-softBeige/30 rounded-lg border border-champagneGold/20">
+                        <span class="text-champagneGold font-bold block mb-1">Instagram Concierge</span>
+                        <a href="https://instagram.com/Aniels_perfumery" target="_blank" class="text-matteBlack font-semibold hover:underline">@Aniels_perfumery</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </x-shop::layouts>
