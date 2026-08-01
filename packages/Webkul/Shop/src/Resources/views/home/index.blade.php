@@ -29,19 +29,18 @@
     <div class="bg-ivory text-matteBlack font-sans selection:bg-champagneGold selection:text-matteBlack">
         
         <!-- SECTION 1: HERO SECTION -->
-        <header class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-ivory text-matteBlack border-b border-champagneGold/20">
+        <header class="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-ivory text-matteBlack border-b border-champagneGold/20 py-16 sm:py-24">
             <div class="absolute inset-0 z-0 bg-cover bg-center opacity-30 mix-blend-multiply transition-opacity duration-700" style="background-image: url('https://images.unsplash.com/photo-1615655406736-b37c4fabf923?auto=format&fit=crop&q=80&w=1920');"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-ivory via-ivory/70 to-transparent z-1"></div>
             
-            <div class="relative z-2 max-w-4xl mx-auto px-4 text-center mt-8">
-                <span class="text-xs uppercase tracking-[0.4em] text-champagneGold font-semibold mb-4 block">Aniel's Signature Experience</span>
-                <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-extralight tracking-tight leading-tight text-matteBlack mb-6">
-                    Every Fragrance Tells a Story. <br>
-                    <span class="italic font-normal text-champagneGold">Discover the scent people will remember you by.</span>
+            <div class="relative z-2 max-w-4xl mx-auto px-4 text-center">
+                <span class="text-xs uppercase tracking-[0.3em] text-champagneGold font-semibold mb-4 block flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4 text-champagneGold inline-block" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    100% Authentic Fragrances Guaranteed
+                </span>
+                <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-extralight tracking-tight leading-tight text-matteBlack mb-8">
+                    Every Fragrance Tells a Story.
                 </h1>
-                <p class="text-gray-600 max-w-xl mx-auto text-sm sm:text-base leading-relaxed tracking-wide font-light mb-10">
-                    Curated authentic designer and niche Arabian fragrances delivered across Nigeria from our flagship boutique in Enugu.
-                </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a href="{{ route('shop.scent_finder.index') }}" class="w-full sm:w-auto px-8 py-4 bg-matteBlack text-ivory uppercase tracking-widest text-xs font-bold rounded shadow-lg hover:bg-champagneGold hover:text-matteBlack transition-all duration-300">
                         Find Your Signature Scent
@@ -52,28 +51,6 @@
                 </div>
             </div>
         </header>
-
-        <!-- SECTION 2: BRAND PILLARS / TRUST BADGES BAR -->
-        <div class="bg-softBeige py-6 border-b border-champagneGold/20">
-            <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-6 md:gap-12 text-xs uppercase tracking-widest text-matteBlack font-semibold">
-                <div class="flex items-center space-x-2 text-champagneGold">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                    <span>100% Authentic Fragrances Guaranteed</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                    <span class="w-1.5 h-1.5 bg-champagneGold rounded-full"></span>
-                    <span>Curated Performance Metrics</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                    <span class="w-1.5 h-1.5 bg-champagneGold rounded-full"></span>
-                    <span>Swift Shipping from Enugu</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                    <span class="w-1.5 h-1.5 bg-champagneGold rounded-full"></span>
-                    <span>Luxury Unboxing Experience</span>
-                </div>
-            </div>
-        </div>
 
         <!-- SECTION 3: SHOP BY MOOD -->
         <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-champagneGold/10">
