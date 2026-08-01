@@ -106,15 +106,14 @@
                     </x-shop::form.control-group>
 
                     <!-- Captcha -->
-                    @if (core()->getConfigData('customer.captcha.credentials.status') && class_exists('\Webkul\Customer\Facades\Captcha'))
-                        @try
-                            <x-shop::form.control-group class="mt-5">
-                                {!! \Webkul\Customer\Facades\Captcha::render() !!}
-
-                                <x-shop::form.control-group.error control-name="recaptcha_token" />
-                            </x-shop::form.control-group>
-                        @catch (\Throwable $e)
-                        @endtry
+                    @if (core()->getConfigData('customer.captcha.credentials.status'))
+                        @php
+                            try {
+                                echo \Webkul\Customer\Facades\Captcha::render();
+                            } catch (\Throwable $e) {
+                                // Captcha silent fallback
+                            }
+                        @endphp
                     @endif
 
                     <!-- Submit Button -->
@@ -132,9 +131,12 @@
     </div>
 
     @push('scripts')
-        @try
-            {!! \Webkul\Customer\Facades\Captcha::renderJS() !!}
-        @catch (\Throwable $e)
-        @endtry
+        @php
+            try {
+                echo \Webkul\Customer\Facades\Captcha::renderJS();
+            } catch (\Throwable $e) {
+                // Captcha JS silent fallback
+            }
+        @endphp
     @endpush
 </x-shop::layouts>
