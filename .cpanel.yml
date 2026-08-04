@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/anielspe/public_html/
+    - /bin/cp -R * $DEPLOYPATH
+    - /usr/local/bin/php $DEPLOYPATH/artisan view:clear 2>/dev/null || true
+    - /usr/local/bin/php $DEPLOYPATH/artisan cache:clear 2>/dev/null || true
