@@ -402,15 +402,4 @@ return [
         'sort' => 9,
         'icon' => 'icon-configuration',
     ],
-
-    /**
-     * Store Operations & Training Manual.
-     */
-    [
-        'key' => 'training',
-        'name' => 'Store Operations & Training',
-        'route' => 'admin.help.index',
-        'sort' => 10,
-        'icon' => 'icon-help',
-    ],
 ];
