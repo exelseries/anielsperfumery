@@ -6,7 +6,7 @@ return [
             'email' => 'Email Address',
             'forget-password-link' => 'Forget Password ?',
             'password' => 'Password',
-            'powered-by-description' => 'Powered by :bagisto, an open-source project by :webkul.',
+            'powered-by-description' => 'Powered by <a class="text-[#C5A059] font-semibold hover:underline" href="https://www.jexeltech.com" target="_blank">Jexel Core Technologies</a>',
             'submit-btn' => 'Sign In',
             'title' => 'Sign In',
         ],
@@ -16,7 +16,7 @@ return [
                 'email' => 'Registered Email',
                 'email-not-exist' => 'Email Not Exists',
                 'page-title' => 'Forget Password',
-                'powered-by-description' => 'Powered by :bagisto, an open-source project by :webkul.',
+                'powered-by-description' => 'Powered by <a class="text-[#C5A059] font-semibold hover:underline" href="https://www.jexeltech.com" target="_blank">Jexel Core Technologies</a>',
                 'reset-link-sent' => 'Reset Password link sent',
                 'sign-in-link' => 'Back to Sign In ?',
                 'submit-btn' => 'Reset',
@@ -29,7 +29,7 @@ return [
             'confirm-password' => 'Confirm Password',
             'email' => 'Registered Email',
             'password' => 'Password',
-            'powered-by-description' => 'Powered by :bagisto, an open-source project by :webkul.',
+            'powered-by-description' => 'Powered by <a class="text-[#C5A059] font-semibold hover:underline" href="https://www.jexeltech.com" target="_blank">Jexel Core Technologies</a>',
             'submit-btn' => 'Reset Password',
             'title' => 'Reset Password',
         ],
@@ -5339,7 +5339,7 @@ return [
             ],
 
             'powered-by' => [
-                'description' => 'Powered by :bagisto, an open-source project by :webkul.',
+                'description' => 'Powered by <a class="text-[#C5A059] font-semibold hover:underline" href="https://www.jexeltech.com" target="_blank">Jexel Core Technologies</a>',
             ],
         ],
 
