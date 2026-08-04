@@ -404,11 +404,11 @@ return [
     ],
 
     /**
-     * Training & Store Manual.
+     * Store Operations & Training Manual.
      */
     [
         'key' => 'training',
-        'name' => 'Training & Manual',
+        'name' => 'Store Operations & Training',
         'route' => 'admin.help.index',
         'sort' => 10,
         'icon' => 'icon-help',
