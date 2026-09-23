@@ -21,10 +21,10 @@ class AdminAccountsSeeder extends Seeder
         DB::table('admins')->updateOrInsert(
             ['email' => 'superadmin@aniels.com'],
             [
-                'name'       => 'Super Admin',
-                'password'   => Hash::make('Aniels@$!'),
-                'status'     => 1,
-                'role_id'    => 1, // Super Admin Role
+                'name' => 'Super Admin',
+                'password' => Hash::make('Aniels@$!'),
+                'status' => 1,
+                'role_id' => 1, // Super Admin Role
                 'created_at' => $now,
                 'updated_at' => $now,
             ]
@@ -34,10 +34,10 @@ class AdminAccountsSeeder extends Seeder
         DB::table('admins')->updateOrInsert(
             ['email' => 'devadmin@aniels.com'],
             [
-                'name'       => 'Dev Admin',
-                'password'   => Hash::make('Exelseries19901926@!@!'),
-                'status'     => 1,
-                'role_id'    => 1, // Super Admin / Developer Role
+                'name' => 'Dev Admin',
+                'password' => Hash::make('Exelseries19901926@!@!'),
+                'status' => 1,
+                'role_id' => 1, // Super Admin / Developer Role
                 'created_at' => $now,
                 'updated_at' => $now,
             ]
