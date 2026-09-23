@@ -46,7 +46,7 @@ class ScentFinderController extends Controller
             $explanations = [];
 
             $name = strtolower($product->name ?? '');
-            $desc = strtolower($product->short_description ?? '' . ' ' . $product->description ?? '');
+            $desc = strtolower($product->short_description ?? ''.' '.$product->description ?? '');
 
             // Mood matching
             if ($mood === 'bold' && (str_contains($name, 'oud') || str_contains($desc, 'oud') || str_contains($desc, 'leather') || str_contains($desc, 'spice'))) {
@@ -94,14 +94,14 @@ class ScentFinderController extends Controller
             $finalScore = min(rand(92, 98), 98);
 
             $recommendations[] = [
-                'id'              => $product->product_id,
-                'name'            => $product->name,
-                'url_key'         => route('shop.product_or_category.index', $product->url_key),
-                'price_html'      => core()->formatPrice($product->min_price ?? $product->price),
-                'image_url'       => $product->product->base_image_url['medium_image_url'] ?? 'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=600',
-                'match_score'     => $finalScore,
-                'explanation'     => implode('. ', array_slice($explanations, 0, 2)) . '.',
-                'short_notes'     => 'Top: Bergamot, Pink Pepper | Heart: Rose, Amber | Base: Vanilla, Oud',
+                'id' => $product->product_id,
+                'name' => $product->name,
+                'url_key' => route('shop.product_or_category.index', $product->url_key),
+                'price_html' => core()->formatPrice($product->min_price ?? $product->price),
+                'image_url' => $product->product->base_image_url['medium_image_url'] ?? 'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=600',
+                'match_score' => $finalScore,
+                'explanation' => implode('. ', array_slice($explanations, 0, 2)).'.',
+                'short_notes' => 'Top: Bergamot, Pink Pepper | Heart: Rose, Amber | Base: Vanilla, Oud',
             ];
         }
 
@@ -114,40 +114,40 @@ class ScentFinderController extends Controller
         if (count($recommendations) < 3) {
             $recommendations = [
                 [
-                    'id'              => 1,
-                    'name'            => "Aniel's Oud Royale Extrait",
-                    'url_key'         => route('shop.search.index') . '?query=oud',
-                    'price_html'      => core()->formatPrice(45000),
-                    'image_url'       => 'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=600',
-                    'match_score'     => 98,
-                    'explanation'     => 'Recommended because of its rich Cambodian Oud base and 12+ hour eternal longevity in tropical climates.',
-                    'short_notes'     => 'Top: Saffron, Nutmeg | Heart: Turkish Rose | Base: Oud Wood, Vanilla',
+                    'id' => 1,
+                    'name' => "Aniel's Oud Royale Extrait",
+                    'url_key' => route('shop.search.index').'?query=oud',
+                    'price_html' => core()->formatPrice(45000),
+                    'image_url' => 'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=600',
+                    'match_score' => 98,
+                    'explanation' => 'Recommended because of its rich Cambodian Oud base and 12+ hour eternal longevity in tropical climates.',
+                    'short_notes' => 'Top: Saffron, Nutmeg | Heart: Turkish Rose | Base: Oud Wood, Vanilla',
                 ],
                 [
-                    'id'              => 2,
-                    'name'            => "Lattafa Khamrah Qahwa",
-                    'url_key'         => route('shop.search.index') . '?query=khamrah',
-                    'price_html'      => core()->formatPrice(38000),
-                    'image_url'       => 'https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=600',
-                    'match_score'     => 95,
-                    'explanation'     => 'Matches your preference for warm gourmand spices, roasted coffee, and rich praline notes.',
-                    'short_notes'     => 'Top: Cinnamon, Cardamom | Heart: Coffee, Praline | Base: Vanilla, Benzoin',
+                    'id' => 2,
+                    'name' => 'Lattafa Khamrah Qahwa',
+                    'url_key' => route('shop.search.index').'?query=khamrah',
+                    'price_html' => core()->formatPrice(38000),
+                    'image_url' => 'https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=600',
+                    'match_score' => 95,
+                    'explanation' => 'Matches your preference for warm gourmand spices, roasted coffee, and rich praline notes.',
+                    'short_notes' => 'Top: Cinnamon, Cardamom | Heart: Coffee, Praline | Base: Vanilla, Benzoin',
                 ],
                 [
-                    'id'              => 3,
-                    'name'            => "Afnan Supremacy Not Only Intense",
-                    'url_key'         => route('shop.search.index') . '?query=afnan',
-                    'price_html'      => core()->formatPrice(42000),
-                    'image_url'       => 'https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=600',
-                    'match_score'     => 92,
-                    'explanation'     => 'Delivers commanding projection with fresh bergamot opening and smoky oakmoss retention.',
-                    'short_notes'     => 'Top: Black Currant, Bergamot | Heart: Oakmoss, Patchouli | Base: Ambergris, Musk',
+                    'id' => 3,
+                    'name' => 'Afnan Supremacy Not Only Intense',
+                    'url_key' => route('shop.search.index').'?query=afnan',
+                    'price_html' => core()->formatPrice(42000),
+                    'image_url' => 'https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=600',
+                    'match_score' => 92,
+                    'explanation' => 'Delivers commanding projection with fresh bergamot opening and smoky oakmoss retention.',
+                    'short_notes' => 'Top: Black Currant, Bergamot | Heart: Oakmoss, Patchouli | Base: Ambergris, Musk',
                 ],
             ];
         }
 
         return response()->json([
-            'success'         => true,
+            'success' => true,
             'recommendations' => array_slice($recommendations, 0, 3),
         ]);
     }

@@ -67,7 +67,7 @@ export default {
 
             const trimmedValue = value.trim();
 
-            if (! /^\+?\d+$/.test(trimmedValue)) {
+            if (! /^\+?[\d\s\-\(\)\.]{7,20}$/.test(trimmedValue)) {
                 return false;
             }
 

@@ -2,12 +2,13 @@
 
 namespace Webkul\Shop\Http\Controllers;
 
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
 use Webkul\Category\Repositories\CategoryRepository;
 use Webkul\Shop\Http\Requests\ContactRequest;
-use Webkul\Shop\Http\Resources\CategoryTreeResource;
 use Webkul\Shop\Mail\ContactUs;
 use Webkul\Theme\Repositories\ThemeCustomizationRepository;
 
@@ -78,9 +79,9 @@ class HomeController extends Controller
     /**
      * Evaluate quiz inputs and return top 3 recommended fragrances.
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
-    public function scentFinderRecommend(\Illuminate\Http\Request $request)
+    public function scentFinderRecommend(Request $request)
     {
         $mood = $request->input('mood', 'bold');
         $occasion = $request->input('occasion', 'date_night');
@@ -89,39 +90,39 @@ class HomeController extends Controller
 
         $recommendations = [
             [
-                'id'              => 1,
-                'name'            => "Aniel's Oud Royale Extrait",
-                'url_key'         => route('shop.search.index') . '?query=oud',
-                'price_html'      => core()->formatPrice(45000),
-                'image_url'       => 'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=600',
-                'match_score'     => 98,
-                'explanation'     => 'Recommended because of its rich Cambodian Oud base and 12+ hour eternal longevity in tropical climates.',
-                'short_notes'     => 'Top: Saffron, Nutmeg | Heart: Turkish Rose | Base: Oud Wood, Vanilla',
+                'id' => 1,
+                'name' => "Aniel's Oud Royale Extrait",
+                'url_key' => route('shop.search.index').'?query=oud',
+                'price_html' => core()->formatPrice(45000),
+                'image_url' => 'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=600',
+                'match_score' => 98,
+                'explanation' => 'Recommended because of its rich Cambodian Oud base and 12+ hour eternal longevity in tropical climates.',
+                'short_notes' => 'Top: Saffron, Nutmeg | Heart: Turkish Rose | Base: Oud Wood, Vanilla',
             ],
             [
-                'id'              => 2,
-                'name'            => "Lattafa Khamrah Qahwa",
-                'url_key'         => route('shop.search.index') . '?query=khamrah',
-                'price_html'      => core()->formatPrice(38000),
-                'image_url'       => 'https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=600',
-                'match_score'     => 95,
-                'explanation'     => 'Matches your preference for warm gourmand spices, roasted coffee, and rich praline notes for date nights.',
-                'short_notes'     => 'Top: Cinnamon, Cardamom | Heart: Coffee, Praline | Base: Vanilla, Benzoin',
+                'id' => 2,
+                'name' => 'Lattafa Khamrah Qahwa',
+                'url_key' => route('shop.search.index').'?query=khamrah',
+                'price_html' => core()->formatPrice(38000),
+                'image_url' => 'https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=600',
+                'match_score' => 95,
+                'explanation' => 'Matches your preference for warm gourmand spices, roasted coffee, and rich praline notes for date nights.',
+                'short_notes' => 'Top: Cinnamon, Cardamom | Heart: Coffee, Praline | Base: Vanilla, Benzoin',
             ],
             [
-                'id'              => 3,
-                'name'            => "Afnan Supremacy Not Only Intense",
-                'url_key'         => route('shop.search.index') . '?query=afnan',
-                'price_html'      => core()->formatPrice(42000),
-                'image_url'       => 'https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=600',
-                'match_score'     => 92,
-                'explanation'     => 'Delivers commanding projection with fresh bergamot opening and smoky oakmoss retention.',
-                'short_notes'     => 'Top: Black Currant, Bergamot | Heart: Oakmoss, Patchouli | Base: Ambergris, Musk',
+                'id' => 3,
+                'name' => 'Afnan Supremacy Not Only Intense',
+                'url_key' => route('shop.search.index').'?query=afnan',
+                'price_html' => core()->formatPrice(42000),
+                'image_url' => 'https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=600',
+                'match_score' => 92,
+                'explanation' => 'Delivers commanding projection with fresh bergamot opening and smoky oakmoss retention.',
+                'short_notes' => 'Top: Black Currant, Bergamot | Heart: Oakmoss, Patchouli | Base: Ambergris, Musk',
             ],
         ];
 
         return response()->json([
-            'success'         => true,
+            'success' => true,
             'recommendations' => $recommendations,
         ]);
     }

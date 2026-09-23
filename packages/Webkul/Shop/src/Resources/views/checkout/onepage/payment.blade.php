@@ -51,19 +51,22 @@
                                     name="payment[method]" 
                                     :value="payment.payment"
                                     :id="payment.method"
+                                    :checked="selectedMethod?.method === payment.method"
                                     class="peer hidden"
                                     @change="store(payment)"
                                 >
     
                                 <label 
                                     :for="payment.method" 
-                                    class="icon-radio-unselect peer-checked:icon-radio-select absolute top-5 cursor-pointer text-2xl text-navyBlue ltr:right-5 rtl:left-5"
+                                    class="absolute top-5 cursor-pointer text-2xl text-navyBlue ltr:right-5 rtl:left-5"
+                                    :class="selectedMethod?.method === payment.method ? 'icon-radio-select' : 'icon-radio-unselect peer-checked:icon-radio-select'"
                                 >
                                 </label>
 
                                 <label 
                                     :for="payment.method" 
-                                    class="block w-[190px] cursor-pointer rounded-xl border border-zinc-200 p-5 max-md:flex max-md:w-full max-md:gap-5 max-md:rounded-lg max-sm:gap-4 max-sm:px-4 max-sm:py-2.5"
+                                    class="block w-[190px] cursor-pointer rounded-xl border p-5 max-md:flex max-md:w-full max-md:gap-5 max-md:rounded-lg max-sm:gap-4 max-sm:px-4 max-sm:py-2.5"
+                                    :class="selectedMethod?.method === payment.method ? 'border-navyBlue border-2' : 'border-zinc-200 peer-checked:border-navyBlue peer-checked:border-2'"
                                 >
                                     {!! view_render_event('bagisto.shop.checkout.onepage.payment-method.image.before') !!}
 
@@ -124,10 +127,34 @@
                 },
             },
 
+            data() {
+                return {
+                    selectedMethod: null,
+                };
+            },
+
             emits: ['payment-method-selected', 'processing', 'processed'],
+
+            watch: {
+                methods: {
+                    handler(newMethods) {
+                        if (newMethods && Object.keys(newMethods).length) {
+                            const methodList = Object.values(newMethods);
+
+                            if (! this.selectedMethod || methodList.length === 1) {
+                                this.store(methodList[0]);
+                            }
+                        }
+                    },
+                    immediate: true,
+                    deep: true,
+                },
+            },
 
             methods: {
                 store(selectedMethod) {
+                    this.selectedMethod = selectedMethod;
+
                     this.$emit('payment-method-selected', selectedMethod.method);
 
                     this.$emit('processing', 'review');

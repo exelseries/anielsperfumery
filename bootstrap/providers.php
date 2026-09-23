@@ -38,6 +38,7 @@ use Webkul\Shop\Providers\ShopServiceProvider;
 use Webkul\Sitemap\Providers\SitemapServiceProvider;
 use Webkul\SocialLogin\Providers\SocialLoginServiceProvider;
 use Webkul\SocialShare\Providers\SocialShareServiceProvider;
+use Webkul\Squadco\Providers\SquadcoServiceProvider;
 use Webkul\Stripe\Providers\StripeServiceProvider;
 use Webkul\Tax\Providers\TaxServiceProvider;
 use Webkul\Theme\Providers\ThemeServiceProvider;
@@ -89,6 +90,7 @@ return [
     SitemapServiceProvider::class,
     SocialLoginServiceProvider::class,
     SocialShareServiceProvider::class,
+    SquadcoServiceProvider::class,
     StripeServiceProvider::class,
     TaxServiceProvider::class,
     ThemeServiceProvider::class,

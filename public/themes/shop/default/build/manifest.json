@@ -15,7 +15,7 @@
     "name": "vue"
   },
   "src/Resources/assets/css/app.css": {
-    "file": "assets/app-D5cZUmbu.css",
+    "file": "assets/app-D8bHOUK4.css",
     "src": "src/Resources/assets/css/app.css",
     "isEntry": true
   },
@@ -36,7 +36,7 @@
     "src": "src/Resources/assets/images/empty-dwn-product.png"
   },
   "src/Resources/assets/images/favicon.ico": {
-    "file": "assets/favicon-Df9chQdB.ico",
+    "file": "assets/favicon-BCPAIMYg.ico",
     "src": "src/Resources/assets/images/favicon.ico"
   },
   "src/Resources/assets/images/hero-image.jpg": {
@@ -112,7 +112,7 @@
     "src": "src/Resources/assets/images/wishlist.png"
   },
   "src/Resources/assets/js/app.js": {
-    "file": "assets/app-CFawTq4x.js",
+    "file": "assets/app-B2PqBLfC.js",
     "name": "app",
     "src": "src/Resources/assets/js/app.js",
     "isEntry": true,

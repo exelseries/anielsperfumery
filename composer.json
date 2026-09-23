@@ -103,6 +103,7 @@
             "Webkul\\Sitemap\\": "packages/Webkul/Sitemap/src",
             "Webkul\\SocialLogin\\": "packages/Webkul/SocialLogin/src",
             "Webkul\\SocialShare\\": "packages/Webkul/SocialShare/src",
+            "Webkul\\Squadco\\": "packages/Webkul/Squadco/src",
             "Webkul\\Stripe\\": "packages/Webkul/Stripe/src",
             "Webkul\\Tax\\": "packages/Webkul/Tax/src",
             "Webkul\\Theme\\": "packages/Webkul/Theme/src",
@@ -122,6 +123,7 @@
             "Webkul\\PayU\\Tests\\": "packages/Webkul/PayU/tests",
             "Webkul\\Razorpay\\Tests\\": "packages/Webkul/Razorpay/tests",
             "Webkul\\Shop\\Tests\\": "packages/Webkul/Shop/tests",
+            "Webkul\\Squadco\\Tests\\": "packages/Webkul/Squadco/tests",
             "Webkul\\Stripe\\Tests\\": "packages/Webkul/Stripe/tests"
         }
     },
