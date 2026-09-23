@@ -18,7 +18,7 @@
             >
                 <div
                     class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity"
-                    style="z-index: 9999999;"
+                    style="z-index: 99999999 !important;"
                     v-show="isOpen"
                 ></div>
             </transition>
@@ -30,18 +30,18 @@
                 enter-from-class="translate-y-4 opacity-0 md:translate-y-0 md:scale-95"
                 enter-to-class="translate-y-0 opacity-100 md:scale-100"
                 leave-class="duration-200 ease-in"
-                leave-from-class="translate-y-0 opacity-100 md:scale-100"
-                leave-to-class="translate-y-4 opacity-0 md:translate-y-0 md:scale-95"
+                leave-from-class="opacity-100"
+                leave-to-class="opacity-0"
             >
                 <div
                     class="fixed inset-0 transform overflow-y-auto transition"
-                    style="z-index: 9999999;"
+                    style="z-index: 99999999 !important;"
                     v-show="isOpen"
                 >
                     <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
                         <div
                             class="absolute left-1/2 top-1/2 w-full max-w-[475px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-xl bg-white p-5 max-md:w-[90%] max-sm:p-4 shadow-2xl"
-                            style="z-index: 10000000;"
+                            style="z-index: 100000000 !important; background-color: #ffffff !important;"
                         >
                             <div class="flex gap-2.5">
                                 <div>
