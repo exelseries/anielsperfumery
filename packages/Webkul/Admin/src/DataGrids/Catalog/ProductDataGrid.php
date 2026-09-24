@@ -143,7 +143,7 @@ class ProductDataGrid extends DataGrid
                     return;
                 }
 
-                return Storage::url($row->base_image);
+                return url('cache/small/'.$row->base_image);
             },
         ]);
 
