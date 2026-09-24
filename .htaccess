@@ -5,9 +5,6 @@
 
     RewriteEngine On
 
-    # Directly serve storage files from storage/app/public/ if symlinks are disabled by cPanel
-    RewriteRule ^storage/(.*)$ storage/app/public/$1 [L,NC]
-
     # Block access to sensitive system files
     RewriteRule ^(\.env|\.git|storage/logs|composer\.json|composer\.lock) - [F,L,NC]
 
