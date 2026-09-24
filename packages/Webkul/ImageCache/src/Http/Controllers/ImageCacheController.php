@@ -185,60 +185,34 @@ class ImageCacheController extends Controller
         $filename = $this->sanitizeFilename($filename);
 
         $paths = config('imagecache.paths', []);
+        $paths[] = storage_path('app/public');
+        $paths[] = public_path('storage');
+        $paths[] = public_path();
 
         foreach ($paths as $basePath) {
-            $basePath = realpath(rtrim($basePath, '/'));
-
-            if (! $basePath) {
+            if (! $basePath || ! is_dir($basePath)) {
                 continue;
             }
 
-            $realPath = realpath($basePath.'/'.$filename);
+            $fullPath = rtrim($basePath, '/').'/'.$filename;
 
-            if (
-                $realPath
-                && str_starts_with($realPath, $basePath.'/')
-            ) {
-                return $realPath;
+            if (file_exists($fullPath)) {
+                return $fullPath;
             }
-        }
 
-        $storageBase = realpath(storage_path('app/public'));
+            // Case-insensitive fallback for Linux case-sensitivity (.JPG vs .jpg)
+            $dir = dirname($fullPath);
+            $baseName = basename($fullPath);
 
-        if ($storageBase) {
-            $realPath = realpath($storageBase.'/'.$filename);
-
-            if (
-                $realPath
-                && str_starts_with($realPath, $storageBase.'/')
-            ) {
-                return $realPath;
-            }
-        }
-
-        $publicBase = realpath(public_path());
-
-        if ($publicBase) {
-            $realPath = realpath($publicBase.'/'.$filename);
-
-            if (
-                $realPath
-                && str_starts_with($realPath, $publicBase.'/')
-            ) {
-                return $realPath;
-            }
-        }
-
-        $storagePublicBase = realpath(public_path('storage'));
-
-        if ($storagePublicBase) {
-            $realPath = realpath($storagePublicBase.'/'.$filename);
-
-            if (
-                $realPath
-                && str_starts_with($realPath, $storagePublicBase.'/')
-            ) {
-                return $realPath;
+            if (is_dir($dir)) {
+                $files = glob($dir.'/*', GLOB_NOSORT);
+                if ($files) {
+                    foreach ($files as $file) {
+                        if (strcasecmp(basename($file), $baseName) === 0) {
+                            return $file;
+                        }
+                    }
+                }
             }
         }
 
